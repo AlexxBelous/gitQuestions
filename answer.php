@@ -1,4 +1,25 @@
-<!-- Start -->
-<!-- Список всех вопросов: -git branch -a -->
-<!-- Переключение -git checkout que-1, que-2, que-3 -->
-<!-- Очищение документа -git checkout . -->
+<?php
+
+// Код ниже 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$string = 'This is the string in which you need to find the letter F';
+$search = 'F';
+$found = strpos_recursive($string, $search);
+
