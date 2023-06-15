@@ -14,12 +14,7 @@
 
 
 
+$array1 = [1, 2, 3, 2, 4, 4, 5];
 
-
-
-
-
-$string = 'This is the string in which you need to find the letter F';
-$search = 'F';
-$found = strpos_recursive($string, $search);
+$array2 = ['apple', 'banana', 'cherry', 'banana', 'durian'];
 
