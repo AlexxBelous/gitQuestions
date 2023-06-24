@@ -45,13 +45,13 @@
 
 <?php
 
-function strpos_recursive($haystack, $needle, $offset = 0, $results = array()) {                
+function foundMark($haystack, $needle, $offset = 0, $results = array()) {                
     $offset = strpos($haystack, $needle, $offset);
     if($offset === false) {
         return $results;            
     } else {
         $results[] = $offset;
-        return strpos_recursive($haystack, $needle, ($offset + 1), $results);
+        return foundMark($haystack, $needle, ($offset + 1), $results);
     }
 }
 
@@ -59,11 +59,11 @@ function strpos_recursive($haystack, $needle, $offset = 0, $results = array()) {
 
 $string = 'This is the string in which you need to find the letter F';
 $search = 'F';
-$found = strpos_recursive($string, $search);
+$found = foundMark($string, $search);
 
 if($found) {
     foreach($found as $pos) {
-        echo 'Letter "'.$search.'"found in string "'.$string.'" at position <b>'.$pos.'</b><br />';
+        echo 'Letter "'.$search.'" found in string - "'.$string.'" at position <b>'.$pos.'</b><br />';
     }    
 } else {
     echo 'Letter "'.$search.'" not found in string - "'.$string.'"';
