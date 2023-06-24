@@ -20,6 +20,5 @@
 
 
 $string = 'This is the string in which you need to find the letter F';
-$search = 'F';
-$found = strpos_recursive($string, $search);
+$whatLooking = '';
 
