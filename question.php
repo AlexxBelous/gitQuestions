@@ -57,7 +57,7 @@ function foundMark($haystack, $needle, $offset = 0, $results = array()) {
 
 
 
-$string = 'This is the string in which you need to find the letter F';
+$string = 'This is the string in which you need to find the letter.';
 $search = 'F';
 $found = foundMark($string, $search);
 
