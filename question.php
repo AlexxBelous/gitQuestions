@@ -1,4 +1,9 @@
-<!-- Напиши function duplicates, которая принимает один аргумент $arr, представляющий собой массив, и возвращает массив, содержащий все повторяющиеся элементы из исходного массива. -->
+<!-- Какая функция в PHP позволяет проверить наличие определенного значения в массиве? 
+Напиши код, который использует эту функцию для проверки наличия числа 42 в массиве $numbers. 
+Код должен выводить на экран - "Целевое число найдено в массиве.",
+или -  "Целевое число не найдено.".
+
+-->
 
 
 
@@ -43,27 +48,19 @@
 
 <?php
 
-function duplicates($arr)
+function isNumberExists($numbers, $targetNumber)
 {
-    $dub = [];
-    foreach ($arr as $key => $value) {
-        if ($key != array_search($value, $arr, TRUE) and !in_array($value, $dub)) $dub[] = $value;
+    if (in_array($targetNumber, $numbers)) {
+        return "The target number is found in the array.";
+    } else {
+        return "The target number is not found.";
     }
-    return $dub;
 }
 
+$numbers = [10, 25, 30, 42, 50];
+$targetNumber = 42;
 
-
-$array1 = [1, 2, 3, 2, 4, 4, 5];
-$result1 = duplicates($array1);
-print_r($result1);
-
-
-$array2 = ['apple', 'banana', 'cherry', 'banana', 'durian'];
-$result2 = duplicates($array2);
-print_r($result2);
-
-
+echo isNumberExists($numbers, $targetNumber);
 
 
 ?>

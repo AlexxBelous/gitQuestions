@@ -3,18 +3,6 @@
 // Код ниже 
 
 
+$numbers = [10, 25, 30, 42, 50];
 
-
-
-
-
-
-
-
-
-
-
-$array1 = [1, 2, 3, 2, 4, 4, 5];
-
-$array2 = ['apple', 'banana', 'cherry', 'banana', 'durian'];
 
