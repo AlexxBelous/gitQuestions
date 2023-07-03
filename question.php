@@ -1,4 +1,4 @@
-<!-- Напиши пример работы функции `getMiddle()`, которая возвращает средний символ или средние два символа из заданной строки? -->
+<!-- Напиши программу, которая будет проверять длину введенной в форму пользователем строки и выводить сообщение о количестве символов. -->
 
 
 
@@ -40,22 +40,21 @@
 
 
 
+
+
+
+
+<form method="POST" action="">
+    <label for="inputString">Input string:</label>
+    <input type="text" id="inputString" name="inputString">
+    <input type="submit" value="Confirm">
+</form>
 
 <?php
-
-
-function getMiddle($text) {
-	$start = floor((strlen($text) - 1) / 2);
-  	$len = strlen($text) % 2 ? 1 : 2;
-	return substr($text, $start, $len);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $inputString = $_POST['inputString'];
+    $length = strlen($inputString);
+    echo "entered string contains $length symbols.";
 }
-
-
-
-
-$string = "Lorem ipsum dolor sit amet";
-$result3 = getMiddle($string);
-echo $result3; //Output - "do"
-
-
 ?>
+
