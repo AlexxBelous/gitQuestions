@@ -1,4 +1,4 @@
-<!-- Как с использованием функции array_search() можно найти индекс элемента "orange" в массиве $fruits и вывести его значение? -->
+<!-- Напиши пример работы функции `getMiddle()`, которая возвращает средний символ или средние два символа из заданной строки? -->
 
 
 
@@ -44,17 +44,18 @@
 <?php
 
 
-$fruits = ['apple', 'banana', 'orange', 'grape'];
-
-$index = array_search('apple', $fruits);
-
-if ($index !== false) {
-    echo "Index of the found element: $index";
-} else {
-    echo "Item not found";
+function getMiddle($text) {
+	$start = floor((strlen($text) - 1) / 2);
+  	$len = strlen($text) % 2 ? 1 : 2;
+	return substr($text, $start, $len);
 }
 
 
+
+
+$string = "Lorem ipsum dolor sit amet";
+$result3 = getMiddle($string);
+echo $result3; //Output - "do"
 
 
 ?>
