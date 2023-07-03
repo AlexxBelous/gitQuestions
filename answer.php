@@ -5,16 +5,5 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 $array = ['apple', 'banana', 'cherry', 'banana', 'durian'];
 
