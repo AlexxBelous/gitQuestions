@@ -1,4 +1,4 @@
-<!-- Напиши function duplicates, которая принимает один аргумент $arr, представляющий собой массив, и возвращает массив, содержащий все повторяющиеся элементы из исходного массива. -->
+<!-- Напиши программу, которая будет подсчитывать количество повторяющихся элементов в массиве и выводить результаты -->
 
 
 
@@ -43,27 +43,25 @@
 
 <?php
 
-function duplicates($arr)
-{
-    $dub = [];
-    foreach ($arr as $key => $value) {
-        if ($key != array_search($value, $arr, TRUE) and !in_array($value, $dub)) $dub[] = $value;
+// Original array
+$array = [2, 4, 6, 2, 4, 8, 4, 2];
+
+// Initialize an empty array to count repetitions
+$counts = [];
+
+// Count repetitions
+foreach ($array as $element) {
+    if (isset($counts[$element])) {
+        $counts[$element]++;
+    } else {
+        $counts[$element] = 1;
     }
-    return $dub;
 }
 
-
-
-$array1 = [1, 2, 3, 2, 4, 4, 5];
-$result1 = duplicates($array1);
-print_r($result1);
-
-
-$array2 = ['apple', 'banana', 'cherry', 'banana', 'durian'];
-$result2 = duplicates($array2);
-print_r($result2);
-
-
+// Output the results
+foreach ($counts as $element => $count) {
+    echo "Element $element repeats $count time(s).<br>";
+}
 
 
 ?>
