@@ -1,4 +1,4 @@
-<!-- Отсортируй массив строк по их длине, где первое слово самое короткое, а последующие длинные. -->
+<!--  Сделай подсчет всех символов в строке, без пробелов -->
 
 
 
@@ -44,18 +44,11 @@
 <?php
 
 
-$randomWords = ['hello', 'friendship', 'people', 'shop', 'road', 'table', 'meeting', 'car'];
+$str = "I'll be home at about 8 o'clock in the evening";
 
-function sortByLength($toSort)
-{
-    usort($toSort, fn ($a, $b) => strlen($a) - strlen($b));
-    return $toSort;
-}
-
-$sortedWord = sortByLength($randomWords);
-
-echo implode(', ', $sortedWord);
-
+$strWithoutSpaces = str_replace(' ', '', $str);
+$length = strlen($strWithoutSpaces);
+echo $length; // 37
 
 
 ?>

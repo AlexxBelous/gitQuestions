@@ -3,7 +3,8 @@
 // Код ниже 
 
 
-$randomWords = ['hello', 'friendship', 'people', 'shop', 'road', 'table', 'meeting', 'car'];
+$str = "I'll be home at about 8 o'clock in the evening";
+
 
 
 
