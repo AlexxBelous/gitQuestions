@@ -3,6 +3,8 @@
 // Код ниже 
 
 
-$fruits = ['apple', 'banana', 'orange', 'grape'];
+$randomWords = ['hello', 'friendship', 'people', 'shop', 'road', 'table', 'meeting', 'car'];
+
+
 
 

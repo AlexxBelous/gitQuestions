@@ -1,4 +1,4 @@
-<!-- Как с использованием функции array_search() можно найти индекс элемента "orange" в массиве $fruits и вывести его значение? -->
+<!-- Отсортируй массив строк по их длине, где первое слово самое короткое, а последующие длинные. -->
 
 
 
@@ -44,16 +44,17 @@
 <?php
 
 
-$fruits = ['apple', 'banana', 'orange', 'grape'];
+$randomWords = ['hello', 'friendship', 'people', 'shop', 'road', 'table', 'meeting', 'car'];
 
-$index = array_search('apple', $fruits);
-
-if ($index !== false) {
-    echo "Index of the found element: $index";
-} else {
-    echo "Item not found";
+function sortByLength($toSort)
+{
+    usort($toSort, fn ($a, $b) => strlen($a) - strlen($b));
+    return $toSort;
 }
 
+$sortedWord = sortByLength($randomWords);
+
+echo implode(', ', $sortedWord);
 
 
 
