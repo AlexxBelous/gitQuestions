@@ -44,11 +44,17 @@
 <?php
 
 
+
+
+function getLengthWithoutSpaces($str)
+{
+    $strWithoutSpaces = str_replace(' ', '', $str);
+    $length = strlen($strWithoutSpaces);
+    return $length;
+}
+
 $str = "I'll be home at about 8 o'clock in the evening";
-
-$strWithoutSpaces = str_replace(' ', '', $str);
-$length = strlen($strWithoutSpaces);
+$length = getLengthWithoutSpaces($str);
 echo $length; // 37
-
 
 ?>
