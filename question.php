@@ -1,4 +1,6 @@
-<!-- Как с использованием функции array_search() можно найти индекс элемента "orange" в массиве $fruits и вывести его значение? -->
+<!-- Проверь, совпадают ли значения и тип данных в переменных.
+Если не совпадают - The value and/or data type do not match.
+Если совпадают - The value and data type match -->
 
 
 
@@ -44,16 +46,14 @@
 <?php
 
 
-$fruits = ['apple', 'banana', 'orange', 'grape'];
+$a = 5;
+$b = "5";
 
-$index = array_search('apple', $fruits);
-
-if ($index !== false) {
-    echo "Index of the found element: $index";
+if ($a !== $b) {
+    echo "The value and/or data type do not match";
 } else {
-    echo "Item not found";
+    echo "The value and data type match";
 }
-
 
 
 

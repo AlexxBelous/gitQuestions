@@ -3,6 +3,8 @@
 // Код ниже 
 
 
-$fruits = ['apple', 'banana', 'orange', 'grape'];
+$a = 5;
+$b = "5";
+
 
 
