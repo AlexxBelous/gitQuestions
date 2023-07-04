@@ -1,4 +1,4 @@
-<!-- Напиши программу, которая будет подсчитывать количество повторяющихся элементов в массиве и выводить результаты -->
+<!-- Добавь в конец массива еще одно имя. Например Olga-->
 
 
 
@@ -43,25 +43,18 @@
 
 <?php
 
-// Original array
-$array = [2, 4, 6, 2, 4, 8, 4, 2];
+$nameArray = ['Alex', 'Nina', 'Ben', 'Ron'];
 
-// Initialize an empty array to count repetitions
-$counts = [];
+echo '<pre>';
+var_dump($nameArray);
+echo '</pre>';
 
-// Count repetitions
-foreach ($array as $element) {
-    if (isset($counts[$element])) {
-        $counts[$element]++;
-    } else {
-        $counts[$element] = 1;
-    }
-}
 
-// Output the results
-foreach ($counts as $element => $count) {
-    echo "Element $element repeats $count time(s).<br>";
-}
+$nameArray[] = 'Olga';
+
+echo '<pre>';
+var_dump($nameArray);
+echo '</pre>';
 
 
 ?>
