@@ -2,8 +2,10 @@
 
 // Код ниже 
 
-$nameArray = ['Alex', 'Nina', 'Ben', 'Ron']; 
+$nameArray = ['Alex', 'Nina', 'Ben', 'Ron'];
 
 echo '<pre>';
 var_dump($nameArray);
 echo '</pre>';
+
+

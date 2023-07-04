@@ -1,4 +1,4 @@
-<!-- Добавь в конец массива еще одно имя. Например Olga-->
+<!-- Добавь в конец массива имена. Например Olga и Max-->
 
 
 
@@ -56,5 +56,11 @@ echo '<pre>';
 var_dump($nameArray);
 echo '</pre>';
 
+
+array_push($nameArray, 'Max');
+
+echo '<pre>';
+var_dump($nameArray);
+echo '</pre>';
 
 ?>
