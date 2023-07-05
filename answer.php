@@ -1,6 +1,8 @@
 <?php
 
 // Код ниже 
+// Максимальная 5 / 2
+
 
 $nameArray = ['Alex', 'Nina', 'Ben', 'Ron'];
 
