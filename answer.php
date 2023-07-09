@@ -7,3 +7,5 @@
 
 
 
+$string = "Hello, World!";
+

@@ -1,4 +1,7 @@
-<!-- Напиши программу, которая будет проверять длину введенной в форму пользователем строки и выводить сообщение о количестве символов. -->
+<!-- Есть исходная строка, из которой нужно получить подстроку World с помощью substr().
+Для этого необходимо использовать три разных аргумент.
+
+ -->
 
 
 
@@ -44,17 +47,22 @@
 
 
 
-<form method="POST" action="">
-    <label for="inputString">Input string:</label>
-    <input type="text" id="inputString" name="inputString">
-    <input type="submit" value="Confirm">
-</form>
 
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $inputString = $_POST['inputString'];
-    $length = strlen($inputString);
-    echo "entered string contains $length symbols.";
-}
+
+$string = "Hello, World!";
+$substring = substr($string, 7, 5);
+echo $substring; // Output: "World"
+
+
+$string = "Hello, World!";
+$substring = substr($string, -6, -1);
+echo $substring; // Output: "World"
+
+$string = "Hello, World!";
+$substring = substr($string, 7);
+echo $substring; // Выводит: "World!"
+
+
 ?>
 
